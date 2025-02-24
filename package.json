@@ -2,6 +2,20 @@
     "name": "@elizaos/plugin-para",
     "version": "0.1.0",
     "description": "Para Wallet integration for Eliza",
+    "agentConfig": {
+        "pluginType": "elizaos:plugin:1.0.0",
+        "pluginParameters": {
+            "PARA_API_KEY": {
+                "type": "string",
+                "description": "API key for the Para service"
+            },
+            "PARA_ENV": {
+                "type": "string",
+                "description": "Environment for Para (production or development)",
+                "default": "production"
+            }
+        }
+    },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "files": [
@@ -16,7 +30,8 @@
         "@elizaos/core": "workspace:*",
         "@getpara/web-sdk": "^2.3.0",
         "@getpara/viem-integration": "^1.0.0",
-        "viem": "2.21.58"
+        "viem": "2.21.58",
+        "zod": "^3.22.2"
     },
     "devDependencies": {
         "@types/jest": "^29.5.3",

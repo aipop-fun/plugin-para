@@ -2,6 +2,7 @@ import { Plugin } from "@elizaos/core";
 import { paraActions } from "./actions";
 import { paraProviders } from "./providers";
 import { ParaWalletService } from "./services/paraWalletService";
+import { validateEnvironment } from "./environment";
 
 export const paraPlugin: Plugin = {
     name: "para-wallet",
@@ -9,6 +10,9 @@ export const paraPlugin: Plugin = {
     actions: paraActions,
     providers: paraProviders,
     services: [new ParaWalletService()],
+    initialize: async (runtime: { getSetting: (key: string) => string | undefined; }) => {        
+        validateEnvironment(runtime);
+    }
 };
 
 export * from "./types";
