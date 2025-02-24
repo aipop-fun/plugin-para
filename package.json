@@ -1,0 +1,28 @@
+{
+    "name": "@elizaos/plugin-para",
+    "version": "0.1.0",
+    "description": "Para Wallet integration for Eliza",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "test": "jest",
+        "lint": "eslint src --ext .ts,.tsx"
+    },
+    "dependencies": {
+        "@elizaos/core": "workspace:*",
+        "@getpara/web-sdk": "^2.3.0",
+        "@getpara/viem-integration": "^1.0.0",
+        "viem": "2.21.58"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.3",
+        "@types/node": "^18.17.1",
+        "eslint": "^8.46.0",
+        "jest": "^29.6.2",
+        "typescript": "^5.1.6"
+    }
+}
